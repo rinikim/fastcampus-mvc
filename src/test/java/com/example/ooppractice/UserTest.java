@@ -16,7 +16,7 @@ class UserTest {
 
         // when
 //        user.initPassword();  // 고정 password 를 넣어주지 않으면 테스트가 성공 및 실패를 번갈아가면서 진행한다. (generatePassword 가 0 ~ 12 자의 패스워드를 생성하므로 7자리 이하 비밀번호면 실패가 발생한다.)
-        user.initPassword(new CorrectFixedPasswordGenerator());
+        user.initPassword(() -> "abcdefgh");
 
         // then
         assertThat(user.getPassword()).isNotNull();
@@ -29,7 +29,7 @@ class UserTest {
         User user = new User();
 
         // when
-        user.initPassword(new WrongFixedPasswordGenerator());    // 항상 2자리 password 이기 때문에 실패
+        user.initPassword(() -> "ab");    // 항상 2자리 password 이기 때문에 실패
 
         // then
         assertThat(user.getPassword()).isNull();
