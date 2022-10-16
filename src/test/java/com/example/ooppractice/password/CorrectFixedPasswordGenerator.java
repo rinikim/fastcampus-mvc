@@ -1,4 +1,6 @@
-package com.example.ooppractice;
+package com.example.ooppractice.password;
+
+import com.example.ooppractice.password.PasswordGenerator;
 
 public class CorrectFixedPasswordGenerator implements PasswordGenerator {
     @Override

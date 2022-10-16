@@ -1,10 +1,10 @@
-package com.example.ooppractice;
+package com.example.ooppractice.password;
 
+import com.example.ooppractice.password.User;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 class UserTest {
 

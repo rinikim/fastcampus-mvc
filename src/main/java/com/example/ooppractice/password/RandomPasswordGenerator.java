@@ -1,11 +1,11 @@
-package com.example.ooppractice;
+package com.example.ooppractice.password;
 
 import org.passay.CharacterData;
 import org.passay.CharacterRule;
 import org.passay.EnglishCharacterData;
 import org.passay.PasswordGenerator;
 
-public class RandomPasswordGenerator implements com.example.ooppractice.PasswordGenerator {
+public class RandomPasswordGenerator implements com.example.ooppractice.password.PasswordGenerator {
 
     /*
      * Special characters allowed in password.

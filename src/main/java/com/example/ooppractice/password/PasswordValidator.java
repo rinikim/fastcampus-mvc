@@ -1,4 +1,4 @@
-package com.example.ooppractice;
+package com.example.ooppractice.password;
 
 public class PasswordValidator {
 
