@@ -1,4 +1,4 @@
-package com.example.ooppractice.calculation;
+package com.example.ooppractice.calculatebyenum;
 
 import java.util.Arrays;
 
