@@ -3,10 +3,9 @@ package com.example.ooppractice.gradecalculate;
 import java.util.List;
 
 public class GradeCalculator {
+    private final Courses courses;
 
-    private List<Course> courses;
-
-    public GradeCalculator(List<Course> courses) {
+    public GradeCalculator(Courses courses) {
         this.courses = courses;
     }
 
@@ -18,16 +17,9 @@ public class GradeCalculator {
      */
     public double calculateGrade() {
         // (학점수×교과목 평점)의 합계
-        double multipliedCreditAndCourseGrade = 0;
-        for (Course course : courses) {
-            // 학점 * 성적을 숫자로 변환한 값 (예를들어 A+ = 95점)
-            multipliedCreditAndCourseGrade += course.multiplyCreditAndCourseGrade();
-        }
-
+        double multipliedCreditAndCourseGrade = courses.multiplyCreditAndCourseGrade();
         // 수강신청 총학점 수
-        int totalCompletedCredit = courses.stream()
-                .mapToInt(Course::getCredit)
-                .sum();
+        int totalCompletedCredit = courses.calculateTotalCompletedCredit();
 
         return multipliedCreditAndCourseGrade / totalCompletedCredit;
     }
