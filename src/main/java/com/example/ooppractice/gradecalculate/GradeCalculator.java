@@ -21,7 +21,7 @@ public class GradeCalculator {
         double multipliedCreditAndCourseGrade = 0;
         for (Course course : courses) {
             // 학점 * 성적을 숫자로 변환한 값 (예를들어 A+ = 95점)
-            multipliedCreditAndCourseGrade += course.getCredit() * course.getGradeToNumber();
+            multipliedCreditAndCourseGrade += course.multiplyCreditAndCourseGrade();
         }
 
         // 수강신청 총학점 수
